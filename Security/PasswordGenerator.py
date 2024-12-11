@@ -1,3 +1,7 @@
+############################################
+#     PASSWORD GENERATOR PYTHON SCRIPT     #
+############################################
+
 import random
 import string
 

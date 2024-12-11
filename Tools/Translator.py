@@ -1,3 +1,7 @@
+####################################
+#     TRANSLATOR PYTHON SCRIPT     #
+####################################
+
 from googletrans import Translator
 from langdetect import detect
 from datetime import datetime
