@@ -8,31 +8,39 @@ Python, the famous programming language that has gone viral thanks to its simpli
   - [Hacking](#hacking)
   - [Networking](#networking)
     - [Netmiko](#netmiko)
-  - [Security](#security)
   - [OSINT](#osint)
+  - [Security](#security)
+  - [Tools](#tools)
+
 
 
 ## What does the library contain?
+
 ### Games
-  - Guess the number
-  - Rock paper scissors
+  - [Guess the number](./Games/GuessNumber.py)
+  - [Rock paper scissors](./Games/RockPaperScissors.py)
+
 ### Hacking
-  - Interactive NMAP
-  - IP Scanner
+  - [Interactive NMAP](./Hacking/InteractiveNmap.py)
+  - [IP Scanner](./Hacking/IPScanner.py)
 
 ### Networking
 #### Netmiko
-- Backup configuration file (Backup)
-- Push configuration commands (Push)
-- Logging script (Backup & Push) 
-- Banner MOTD & Banner EXEC
-
-### Security
-- Password Generator
+- [Backup configuration file](./Networking/Netmiko/Script4Backup.py)
+- [Push configuration commands](./Networking/Netmiko/Script4Push.py)
+- [Logging script](./Networking/Netmiko/Script4Logging.py)
+- [Banner EXEC](./Networking/EXEC-Banner.sh)
+- [Banner MOTD](./Networking/MOTD-Banner.sh)
 
 ### OSINT
-- Domain Lookup
-- IP address Geolocation
+- Coming soon ..
+
+### Security
+- [Password Generator](./Security/PasswordGenerator.py)
+
+### Tools
+- [Translator](./Tools/Translator.py)
+
 
 
 ___
