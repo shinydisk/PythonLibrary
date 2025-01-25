@@ -111,7 +111,7 @@ def main(file_csv, username, password):
 if __name__ == "__main__":
     # Username and password for the connection
     username = "admin"
-    password = "ZIg2n4ZK-D<MOkZ9AtgH"
+    password = "password"
 
     # CSV file containing switch IPs
     file_csv = "iplist.csv"

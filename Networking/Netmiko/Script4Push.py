@@ -99,7 +99,7 @@ if __name__ == "__main__":
     ]
     
     # Username and password for the connection
-    username = "username"
+    username = "admin"
     password = "password"
 
     # CSV file containing switch IPs
