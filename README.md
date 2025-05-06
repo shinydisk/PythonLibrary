@@ -9,6 +9,7 @@ Python, the famous programming language that has gone viral thanks to its simpli
 - [Ethical Hacking](/ethical_hacking/README.md)
 - [File Management](/file_management/README.md)
 - [Mass Configuration](/mass_configuration/README.md)
+  - [Netmiko](./mass_configuration/netmiko/README.md)
 - [OSINT Tools](/osint_tools/README.md)
 - [Python Games](/python_games/README.md)
 - [Security Tools](/security_tools/README.md)
