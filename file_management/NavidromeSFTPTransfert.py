@@ -95,7 +95,7 @@ def main():
 
     # --- Check port ---
     try:
-        format_log("[INFO]", f"Checking SSH availability on {host}:22...", LogColors.YELLOW)
+        format_log("\n[INFO]", f"Checking SSH availability on {host}:22...", LogColors.YELLOW)
         with socket.create_connection((host, 22), timeout=5):
             pass
     except Exception:
@@ -118,10 +118,10 @@ def main():
 
         sftp.close()
         transport.close()
-        format_log("\n[DONE]", "Transfer complete ✅", LogColors.GREEN)
+        format_log("\n[DONE]", "Transfer complete ✅\n", LogColors.GREEN)
 
     except Exception as e:
-        format_log("[ERROR]", f"An error occurred: {e}", LogColors.RED)
+        format_log("\n[ERROR]", f"An error occurred: {e}\n", LogColors.RED)
 
 if __name__ == "__main__":
     main()
