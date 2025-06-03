@@ -6,19 +6,16 @@ Python, the famous programming language that has gone viral thanks to its simpli
 
 - [Documentation](/Docs/README.md)
   - [Templates README](/Docs/templates/README.md)
-
 - [Files](/Files/README.md)
   - [Duplicate local file checkup](/Files/DuplicateFileCheckup.py)
   - [Navidrome SFTP transfert](/Files/NavidromeSFTPTransfert.py)
   - [Translator](/Files/Translator.py)
-
 - [Games](/Games/README.md)
   - [Guess Number](/Games/GuessNumber.py)
   - [Rock Paper Scissors](/Games/RockPaperScissors.py)
-
 - [Hacking](/Hacking/README.md)
-  - [](/Hacking/InteractiveNMAP.py)
-  - [](/Hacking/IPScanner.py)
+  - [Interactive NMAP](/Hacking/InteractiveNMAP.py)
+  - [IP Scanner](/Hacking/IPScanner.py)
 - [Network](/Network/README.md)
   - [Execution Banner](/Network/EXEC-Banner.txt)
   - [MOTD Banner](/Network/MOTD-Banner.txt)
@@ -27,11 +24,10 @@ Python, the famous programming language that has gone viral thanks to its simpli
     - [Inventory list](/Network/netmiko/Script4Inventory.py)
     - [Logging backup](/Network/netmiko/Script4Logging.py)
     - [Pushing configuration](/Network/netmiko/Script4Push.py)
-
 - [OSINT](/OSINT/README.md)
 - [Security](/Security/README.md)
 - [Telegram](/Telegram/README.md)
-
+  - [CheckBrew.py](/Telegram/CheckBrew.py)s
 
 ___
 <div align="center">
