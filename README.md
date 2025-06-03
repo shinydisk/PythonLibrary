@@ -4,8 +4,7 @@ Python, the famous programming language that has gone viral thanks to its simpli
 
 # Table of contents
 - [Documentation](/docs/README.md)
-  - [Templates](/docs/templates/README.md)
-    - [Titles](/docs/templates/titles/README.md)
+  - [Templates README](/docs/templates/README.md)
 - [Ethical Hacking](/ethical_hacking/README.md)
 - [File Management](/file_management/README.md)
 - [Mass Configuration](/network_configuration/README.md)
