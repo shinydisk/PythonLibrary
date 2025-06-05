@@ -1,0 +1,21 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-04 09:39 CEST
+Stats: 0:00:07 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 19.67% done; ETC: 09:39 (0:00:29 remaining)
+Stats: 0:00:09 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 20.75% done; ETC: 09:39 (0:00:34 remaining)
+Stats: 0:00:33 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 49.00% done; ETC: 09:40 (0:00:34 remaining)
+Stats: 0:00:35 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 50.75% done; ETC: 09:40 (0:00:34 remaining)
+Nmap scan report for lfbn-lyo-1-215-29.w86-202.abo.wanadoo.fr (86.202.61.29)
+Host is up (1.4s latency).
+Not shown: 94 closed tcp ports (conn-refused)
+PORT    STATE    SERVICE
+21/tcp  open     ftp
+22/tcp  open     ssh
+25/tcp  filtered smtp
+80/tcp  open     http
+443/tcp open     https
+554/tcp open     rtsp
+
+Nmap done: 1 IP address (1 host up) scanned in 90.34 seconds
