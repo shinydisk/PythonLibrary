@@ -16,7 +16,7 @@ if not os.path.exists('Logs'):
 
 # Logging configuration (saving logs in the "Logging" directory)
 logging.basicConfig(
-    filename='Logging/netmiko_logs_backup.log',
+    filename='Logging/netmiko_logging.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
