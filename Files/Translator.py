@@ -1,10 +1,11 @@
-####################################
-#     TRANSLATOR PYTHON SCRIPT     #
-####################################
-
+import sys
+import os
 from googletrans import Translator
 from langdetect import detect
 from datetime import datetime
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
 
 # List of the 10 most translated languages with their codes
 languages = {
@@ -45,9 +46,12 @@ def save_to_file(original_text, translated_text):
 
 # Main function for user interaction
 def main():
-    print("\n\033[1m-------------------------------------\033[0m")
-    print("🌍     \033[1mINTERACTIVE TRANSLATOR\033[0m     🌍")
-    print("\033[1m-------------------------------------\033[0m")
+    print_banner(
+        name        = "🌐 Translator",
+        description = "🔤 Auto-detect and translate text into 10 languages",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
 
     # Ask the user to enter the text to translate
     original_text = input("\n\033[1mEnter the text to translate: \033[1m")

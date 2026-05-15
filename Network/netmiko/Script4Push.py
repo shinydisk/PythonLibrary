@@ -2,6 +2,7 @@
 #     NETMIKO PUSHING CONFIGURATION      #
 ##########################################
 
+import sys
 import csv
 import logging
 import os
@@ -11,6 +12,9 @@ from netmiko import (
     NetmikoTimeoutException,
     NetmikoAuthenticationException,
 )
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from banner import print_banner
 
 # Create directories for logging if they do not exist
 if not os.path.exists("Logging"):
@@ -82,9 +86,12 @@ def read_csv(file_csv):
 
 def main(file_csv, commands, device_type="device_type"):
     """Main function to process switches in bulk."""
-    print("\n######################################")
-    print("#     Starting bulk operation...     #")
-    print("######################################")
+    print_banner(
+        name        = "⬆️  Push Config",
+        description = "🌐 Push configuration commands to Aruba switches",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
     logging.info("######################################")
     logging.info("#     Starting bulk operation...     #")
     logging.info("######################################")

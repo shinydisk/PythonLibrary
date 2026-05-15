@@ -1,13 +1,16 @@
-##################################################
-#     ROCK PAPER SCISSORS GAME PYHTON SCRIPT     #
-##################################################
-
+import sys
+import os
 import random
 
-# Header
-print(f"\n\033[1m-----------------------------------------\033[0m")
-print(f"🕹️      \033[1mROCK 🪨  PAPER 📄 SCISSORS ✂️\033[0m     🕹️")
-print(f"\033[1m-----------------------------------------\033[0m\n")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
+
+print_banner(
+    name        = "✂️  Rock Paper Scissors",
+    description = "🥊 A multi-round Rock Paper Scissors game",
+    version     = "1.0",
+    author      = "shinydisk",
+)
 
 # Function to get the user's choice
 def get_user_choice():

@@ -1,13 +1,16 @@
-###########################################
-#     GUESS NUMBER GAME PYTHON SCRIPT     #
-###########################################
-
+import sys
+import os
 import random
 
-# Header
-print(f"\n\033[1m--------------------------------------\033[0m")
-print(f"🕹️      \033[1mGUESS THE NUMBER GAME 🔢\033[0m     🕹️")
-print(f"\033[1m--------------------------------------\033[0m")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
+
+print_banner(
+    name        = "🎲 Guess The Number",
+    description = "🧠 A classic number guessing game (1-100)",
+    version     = "1.0",
+    author      = "shinydisk",
+)
 print("\nI'm thinking of a number between 1 and 100... 🧠\n")
 
 def guess_the_number():

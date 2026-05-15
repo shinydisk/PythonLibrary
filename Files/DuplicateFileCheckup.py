@@ -1,12 +1,19 @@
+import sys
 import os
 import hashlib
 from collections import defaultdict
 from rich.console import Console
 from rich.table import Table
 
-print("\n\033[1m    📁 --------------------------------- 📁\033[0m")
-print("\033[1m     🔍  -  Duplicate File Checkup  -  🔍\033[0m")
-print("\033[1m    📁 --------------------------------- 📁\033[0m\n")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
+
+print_banner(
+    name        = "🔍 Duplicate File Checkup",
+    description = "🗂️  Scan a directory for duplicate files by name",
+    version     = "1.0",
+    author      = "shinydisk",
+)
 
 def calculate_file_hash(file_path, chunk_size=1024):
     """Calcule le hash SHA256 d'un fichier."""

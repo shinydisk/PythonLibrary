@@ -1,12 +1,18 @@
+import sys
+import os
 import random
 import string
-import sys
 import pyperclip
 
-# Header
-print(f"\n\033[1m---------------------------------\033[0m")
-print(f"🔑     \033[1mPASSWORD GENERATOR\033[0m     🔑")
-print(f"\033[1m---------------------------------\033[0m\n")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
+
+print_banner(
+    name        = "🔐 Password Generator",
+    description = "🔑 Generate strong passwords with custom rules",
+    version     = "1.0",
+    author      = "shinydisk",
+)
 print(f"\n\033[93mIf you wish to leave the interaction, type 'exit'.\033[0m\n")
 
 def get_user_preferences():

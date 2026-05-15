@@ -1,7 +1,11 @@
+import sys
 import subprocess
 import os
 import time
 from colorama import init, Fore, Style
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
 
 # Initialisation de colorama
 init(autoreset=True)
@@ -14,10 +18,12 @@ HISTORY_FILE = os.path.join(SCAN_DIR, "history.log")
 os.makedirs(SCAN_DIR, exist_ok=True)
 
 def banner():
-    print("\n")
-    print(Fore.CYAN + Style.BRIGHT + "="*50)
-    print(Fore.GREEN + Style.BRIGHT + "             SCRIPT NMAP INTERACTIF PRO")
-    print(Fore.CYAN + Style.BRIGHT + "="*50)
+    print_banner(
+        name        = "🔭 Interactive NMAP",
+        description = "🛡️  Run NMAP scans interactively with history",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
 
 def menu():
     print(Fore.YELLOW + "\nQue voulez-vous faire ?")

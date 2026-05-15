@@ -1,9 +1,13 @@
+import sys
 import os
 import paramiko
 import socket
 from stat import S_ISDIR
 from getpass import getpass
 from tqdm import tqdm
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from banner import print_banner
 
 # --- Log colors ---
 class LogColors:
@@ -79,9 +83,12 @@ paramiko.SFTPClient.makedirs = sftp_makedirs
 
 # --- Main logic ---
 def main():
-    print("\n\033[1m    📂 ------------------------ 📂\033[0m")
-    print("\033[1m     🔐     SFTP Transfer     🔐\033[0m")
-    print("\033[1m    📂 ------------------------ 📂\033[0m\n")
+    print_banner(
+        name        = "📤 SFTP Transfer",
+        description = "🔄 Sync local files to a remote SFTP server",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
     host = input("\033[1m[CONF]\033[0m IPv4 server address: ").strip()
     username = input("\033[1m[CONF]\033[0m Login: ").strip()
     password = getpass("\033[1m[CONF]\033[0m Password: ")

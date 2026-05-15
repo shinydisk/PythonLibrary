@@ -2,6 +2,7 @@
 #     BACKUP CONFIGURATION NETMIKO PYTHON SCRIPT     #
 ######################################################
 
+import sys
 import csv
 import os
 import logging
@@ -12,6 +13,9 @@ from netmiko import (
     NetmikoTimeoutException,
     NetmikoAuthenticationException
 )
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from banner import print_banner
 
 # Create directories for logging and backups if they do not exist
 os.makedirs("Logging", exist_ok=True)
@@ -98,9 +102,12 @@ def read_csv(file_csv):
 
 def main(file_csv, device_type="aruba_osswitch"):
     """Main function to process switches in bulk and save configurations."""
-    print("\n#################################################")
-    print("#     Starting bulk configuration backup...     #")
-    print("#################################################")
+    print_banner(
+        name        = "💾 Config Backup",
+        description = "🌐 Bulk backup Aruba switch configurations via SSH",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
     logging.info("##############################################")
     logging.info("#     Starting bulk configuration backup     #")
     logging.info("##############################################")

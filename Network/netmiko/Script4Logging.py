@@ -2,6 +2,7 @@
 #       BACKUP LOGS FROM ARUBA SWITCHES SCRIPT       #
 ######################################################
 
+import sys
 import csv
 import os
 import logging
@@ -12,6 +13,9 @@ from netmiko import (
     NetmikoTimeoutException,
     NetmikoAuthenticationException
 )
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from banner import print_banner
 
 # Create directories if they do not exist
 if not os.path.exists('Logging'):
@@ -102,9 +106,12 @@ def read_csv(file_csv):
 
 def main(file_csv, device_type="aruba_osswitch"):
     """Main function to retrieve logs from multiple switches."""
-    print("\n#################################################")
-    print("#        Starting bulk logs retrieval...        #")
-    print("#################################################")
+    print_banner(
+        name        = "📜 Switch Logging",
+        description = "🌐 Retrieve and archive logs from Aruba switches",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
     logging.info("###############################################")
     logging.info("#       Starting bulk logs retrieval          #")
     logging.info("###############################################")

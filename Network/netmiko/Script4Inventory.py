@@ -2,6 +2,7 @@
 #              ARUBA SWITCH INVENTORY SCRIPT         #
 ######################################################
 
+import sys
 import csv
 import os
 import logging
@@ -11,6 +12,9 @@ from netmiko import (
     NetmikoTimeoutException,
     NetmikoAuthenticationException
 )
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from banner import print_banner
 
 # Définition des dossiers
 os.makedirs("Logging", exist_ok=True)
@@ -110,9 +114,12 @@ def read_csv(file_csv):
 
 def main(file_csv, device_type="aruba_osswitch"):
 
-    print("\n########################################")
-    print("#        Starting Inventory Job        #")
-    print("########################################\n")
+    print_banner(
+        name        = "📋 Switch Inventory",
+        description = "🌐 Build a CSV inventory of Aruba switches",
+        version     = "1.0",
+        author      = "shinydisk",
+    )
 
     # 🔐 Credentials demandés au lancement
     username = input("Login: ")
